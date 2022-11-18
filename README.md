@@ -33,3 +33,17 @@ $ # Aparecera el siguiente indicador
 Starting development server at http://127.0.0.1:8000/
 ...
 ```
+
+## Iniciar backend
+```bash
+(venv) $ # Con el entorno activado
+(venv) $ cd backend
+(venv) $ python manage.py migrate 
+(venv) $ python manage.py runserver
+... # RUTA 
+Starting development server at http://127.0.0.1:7000/
+...
+
+$ # La api devuelve un JSON con los usuarios registrados en la direccion:
+$ # http://127.0.0.1:7000/users/?format=json
+```
