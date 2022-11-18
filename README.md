@@ -16,8 +16,20 @@ Para LINUX   $ source venv/bin/activate
 Para WINDOWS $ .\venv\Script\activate
 
 $ # Aparecera el siguiente indicador
-(venv) user@hoset:~$ 
+(venv) user@host:~$ 
 
-$ # Con el entorno activado instalamos los requerimientos
-$ pip install -r requerimientos.txt
+(venv) $ # Con el entorno activado instalamos los requerimientos
+(venv) $ pip install -r requerimientos.txt
+```
+
+## Iniciar frontend
+```bash
+(venv) $ # Con el entorno activado
+(venv) $ cd frontend
+(venv) $ # No se usa la base de datos pero aplico las migraciones para evitar errores
+(venv) $ python manage.py migrate 
+(venv) $ python manage.py runserver
+... # RUTA 
+Starting development server at http://127.0.0.1:8000/
+...
 ```
