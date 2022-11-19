@@ -3,6 +3,13 @@ from rest_framework import viewsets
 from rest_framework import permissions
 from backend.api.serializers import UserSerializer, GroupSerializer
 
+from backend.api.models import Nota
+from backend.api.serializers import NotaSerializer
+from django.http import Http404
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+
 
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -20,3 +27,20 @@ class GroupViewSet(viewsets.ModelViewSet):
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
     # permission_classes = [permissions.IsAuthenticated]
+
+
+class NotaList(APIView):
+    """
+    Lista todas las notas o crea una nueva
+    """
+    def get(self, request, format=None):
+        snippets = Nota.objects.all()
+        serializer = NotaSerializer(snippets, many=True)
+        return Response(serializer.data)
+
+    def post(self, request, format=None):
+        serializer = NotaSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
