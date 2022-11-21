@@ -15,6 +15,7 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class NotaSerializer(serializers.Serializer):
+    id = serializers.IntegerField(required=True)
     contenido = serializers.CharField(required=False, allow_blank=True, max_length=100)
 
     def create(self, validated_data):
