@@ -1,10 +1,10 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 from rest_framework import permissions
-from backend.api.serializers import UserSerializer, GroupSerializer
+from backend.serializers import UserSerializer, GroupSerializer
 
-from backend.api.models import Nota
-from backend.api.serializers import NotaSerializer
+from backend.models import Nota
+from backend.serializers import NotaSerializer
 from django.http import Http404
 from rest_framework.views import APIView
 from rest_framework.response import Response
