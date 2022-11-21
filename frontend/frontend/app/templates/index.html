@@ -47,19 +47,26 @@
 			<!-- Espacio -->
 			<br />
 
-			<!-- Sección usuarios -->
+			<!-- Sección notas -->
 			<section id="notas" class="paper">
 	
 				<!-- Encabezado -->
 				<div class="d-flex justify-content-between">
-					<h3 id="header-usuarios">Notas</h3>
-					<div>
+					<h3 id="header-notas">Notas</h3>
+					<div class="d-flex">
+						<input id="data-nueva" class="form-control"></input>
+						&nbsp; <!-- Esto solo es un espacio --> 
 						<button id="crear-nota-button" class="btn btn-success">Nueva</button>
 					</div>
 				</div>
 				
-				<!-- Lista de usuarios -->
-				<ul id="lista-de-usuarios"></ul>
+				<!-- Lista de notas -->
+				<table class="table table-bordered mt-2" id="tabla-de-notas">
+					<tr>
+						<th>Nota</th>
+						<th class="text-right">Acción</th>
+					</tr>
+				</table>
 			</section>
 		</div>
 	</div>

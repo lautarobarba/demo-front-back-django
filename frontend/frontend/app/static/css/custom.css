@@ -17,3 +17,7 @@ body {
   padding: 1.5rem;
   border-radius: 5px;
 }
+
+.text-right {
+  text-align: right;
+}
