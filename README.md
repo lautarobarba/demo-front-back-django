@@ -45,3 +45,12 @@ Starting development server at http://127.0.0.1:7000/
 $ # La api devuelve un JSON con los usuarios registrados en la direccion:
 $ # http://127.0.0.1:7000/users/?format=json
 ```
+
+### Comunicacion entre el front y el back
+
+![imagen1](https://raw.githubusercontent.com/lautarobarba/demo-front-back-django/master/images/1.png "imagen1")
+![imagen2](https://raw.githubusercontent.com/lautarobarba/demo-front-back-django/master/images/2.png "imagen2")
+
+### El cliente realiza toda la logica desde la siguiente ubicacion
+
+![imagen3](https://raw.githubusercontent.com/lautarobarba/demo-front-back-django/master/images/3.png "imagen3")
